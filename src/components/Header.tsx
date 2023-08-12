@@ -22,7 +22,7 @@ const Header = async () => {
           <div className="hidden sm:block">
             {items.map((item: any) => (
               <Link
-                href={`/product/${item.id}`}
+                href={`/products/${item.id}`}
                 key={item.id}
                 className="ml-4 text-sm text-slate-500 hover:text-slate-800"
               >

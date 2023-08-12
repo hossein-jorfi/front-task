@@ -22,7 +22,7 @@ const MobileMenu = ({ items }: { items: categpryType[] }) => {
       >
         {items.map((item) => (
           <Link
-            href={`/product/${item.id}`}
+            href={`/products/${item.id}`}
             key={item.id}
             className="ml-4 text-slate-500 hover:text-slate-800"
           >
