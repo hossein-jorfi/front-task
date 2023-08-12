@@ -12,11 +12,15 @@ async function Home() {
   const data = await getData();
   return (
     <div className="min-h-screen bg-slate-100">
-      {data.length &&
-        data.map((item: categpryType) => (
-          <CategoryCard key={item.id} catrgory={item} />
-        ))}
-      <div className="my-container">دسته بندی ها</div>
+      <div className="my-container">
+        <p className="py-10">دسته بندی ها</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
+          {data.length &&
+            data.map((item: categpryType) => (
+              <CategoryCard key={item.id} catrgory={item} />
+            ))}
+        </div>
+      </div>
     </div>
   );
 }
