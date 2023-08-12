@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import Providers from "@/redux/Providers";
 import { Vazirmatn } from "next/font/google";
@@ -14,8 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={vazir.className}>{children}</body>
+    <html lang="fa" dir="rtl">
+      <body className={vazir.className}>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
