@@ -27,8 +27,8 @@ const CartPlus = ({ id, title, image, price }: CartPlusProps) => {
   };
 
   return (
-    <div className="bg-[#F7F7F7] rounded-full p-2">
-      <Image src={cartPlusSvg} alt="cart" onClick={addHandler} />
+    <div className="bg-[#F7F7F7] rounded-full p-2 cursor-pointer" onClick={addHandler}>
+      <Image src={cartPlusSvg} alt="cart" />
     </div>
   );
 };
