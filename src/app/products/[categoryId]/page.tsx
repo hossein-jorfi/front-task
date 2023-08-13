@@ -11,7 +11,7 @@ const Page = async ({ params }: any) => {
   const data = await getData(params.categoryId);
 
   return (
-    <div className="bg-slate-100 pt-10">
+    <div className="bg-slate-100 pt-40">
       <div className="my-container min-h-screen">
         <p className="py-10">مراقبت پوست</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">

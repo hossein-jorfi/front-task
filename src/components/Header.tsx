@@ -14,7 +14,7 @@ async function getData() {
 const Header = async () => {
   const items = await getData();
   return (
-    <div className="bg-white shadow-lg sticky">
+    <div className="bg-white shadow-lg fixed w-full">
       <div className="my-container py-5">
         <Image src={logo} alt="logo" className="hidden sm:block" />
         <div className="flex justify-between items-center mt-5">
