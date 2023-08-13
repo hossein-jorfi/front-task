@@ -24,7 +24,6 @@ const CartPlus = ({ id, title, image, price }: CartPlusProps) => {
 
   const addHandler = () => {
     dispath(addProduct(myPayload));
-    console.log(cart)
   };
 
   return (

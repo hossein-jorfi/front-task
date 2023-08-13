@@ -1,7 +1,7 @@
 import { productType } from "@/types";
 import { createSlice } from "@reduxjs/toolkit";
 
-type cartSliceType = {
+export type cartSliceType = {
   products: productType[];
   totalCount: number;
   totalPrice: number;
