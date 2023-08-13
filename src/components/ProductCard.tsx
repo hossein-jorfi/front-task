@@ -25,7 +25,7 @@ const ProductCard = ({ id, image, title, price }: ProductCardProps) => {
         <p className="text-slate-800 text-sm max-h-6">{title}</p>
         <div className="flex justify-between items-center mt-14">
           <p className="text-sm text-[#FF385C]">{price} تومان</p>
-          <CartPlus id={id} />
+          <CartPlus id={id} image={image} price={price} title={title} />
         </div>
       </div>
     </div>

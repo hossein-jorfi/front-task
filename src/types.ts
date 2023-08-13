@@ -4,3 +4,11 @@ export type categpryType = {
   id: number;
   image: string;
 };
+
+export type productType = {
+  image: string;
+  id: number;
+  price: number;
+  title: string;
+  count?: number;
+};
