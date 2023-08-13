@@ -18,7 +18,7 @@ const CartCard = ({ id }: CartCardProps) => {
   );
 
   return (
-    <div className="flex">
+    <div className="flex py-5">
       <div>
         <Image
           src={`https://shopapi.liateam.com/${productInCart?.image}`}
@@ -31,8 +31,12 @@ const CartCard = ({ id }: CartCardProps) => {
       </div>
       <div className="flex justify-between w-full">
         <div>
-          <p>{productInCart?.title}</p>
-          <CartButtons count={productInCart?.count as number} />
+          <p className="text-slate-700 font-light">{productInCart?.title}</p>
+          <CartButtons
+            count={productInCart?.count as number}
+            product={productInCart as productType}
+          />
+          <p className="text-sm mt-2 text-[#FF385C]">{productInCart?.price} تومان</p>
         </div>
         <div>
           <Image src={closeSVG} alt="close" />

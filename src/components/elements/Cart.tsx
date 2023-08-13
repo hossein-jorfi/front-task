@@ -12,7 +12,7 @@ const Cart = () => {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <div className="relative cursor-pointer">
+    <div className="relative">
       <Image
         src={cartIcon}
         alt="cart"
@@ -32,9 +32,11 @@ const Cart = () => {
         ) : (
           <div className="">
             <p className="text-xs text-slate-600">{cart.totalCount} قلم کالا</p>
-            {cart.products.map((item: productType) => (
-              <CartCard key={item.id} id={item.id} />
-            ))}
+            <div className=" divide-y-2">
+              {cart.products.map((item: productType) => (
+                <CartCard key={item.id} id={item.id} />
+              ))}
+            </div>
           </div>
         )}
       </div>
