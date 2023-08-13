@@ -23,7 +23,7 @@ const Cart = () => {
       </p>
 
       <div
-        className={`absolute top-16 w-72 sm:w-96 rounded-xl left-0 bg-white border ${
+        className={`absolute top-16 w-72 sm:w-96 rounded-xl left-0 bg-white border-2 ${
           isClicked ? "block" : "hidden"
         }`}
       >

@@ -18,7 +18,7 @@ const MobileMenu = ({ items }: { items: categpryType[] }) => {
       <div
         className={`${
           isClicked ? "block" : "hidden"
-        } absolute top-20 rounded p-3 w-52 bg-white flex flex-col space-y-5`}
+        } absolute top-20 rounded-xl p-3 w-52 bg-white flex flex-col space-y-5 border-2`}
       >
         {items.map((item) => (
           <Link
