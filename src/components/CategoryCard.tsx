@@ -17,7 +17,7 @@ const CategoryCard = ({ catrgory }: CategoryCardProps) => {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }} // optional
+          style={{ width: "100%", height: "auto" }}
         />
       </div>
       <Link href={`/products/${catrgory.id}`} className="text-slate-600 hover:text-black">
