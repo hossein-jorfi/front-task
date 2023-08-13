@@ -1,9 +1,8 @@
 import logo from "@/assets/logo.png";
-import cartIcon from "@/assets/cart.png";
-
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import Cart from "./elements/Cart";
 
 async function getData() {
   const res = await fetch(
@@ -31,12 +30,7 @@ const Header = async () => {
             ))}
           </div>
           <MobileMenu items={items} />
-          <div className="relative cursor-pointer">
-            <Image src={cartIcon} alt="cart" />
-            <p className="absolute -top-2 -right-2 text-white px-1 pt-[3px] bg-red-500 rounded-full w-fit h-fit text-center text-sm">
-              10
-            </p>
-          </div>
+          <Cart />
         </div>
       </div>
     </div>
