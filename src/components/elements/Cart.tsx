@@ -23,21 +23,35 @@ const Cart = () => {
       </p>
 
       <div
-        className={`absolute top-16 w-72 sm:w-96 rounded-lg p-3 left-0 bg-white border ${
+        className={`absolute top-16 w-72 sm:w-96 rounded-xl left-0 bg-white border ${
           isClicked ? "block" : "hidden"
         }`}
       >
         {cart.products.length === 0 ? (
-          <p className="text-slate-600">سبد خرید خالی است!</p>
+          <p className="text-slate-600 p-3">سبد خرید خالی است!</p>
         ) : (
-          <div className="">
-            <p className="text-xs text-slate-600">{cart.totalCount} قلم کالا</p>
-            <div className=" divide-y-2">
-              {cart.products.map((item: productType) => (
-                <CartCard key={item.id} id={item.id} />
-              ))}
+          <>
+            <div className="p-3">
+              <p className="text-xs text-slate-600">
+                {cart.totalCount} قلم کالا
+              </p>
+              <div className=" divide-y-2">
+                {cart.products.map((item: productType) => (
+                  <CartCard key={item.id} id={item.id} />
+                ))}
+              </div>
             </div>
-          </div>
+            <div className="bg-gray-200 p-3 rounded-b-xl space-y-6">
+              <div className="flex justify-between text-slate-900 font-light">
+                <span>جمع کل :</span>
+                <span>{cart.totalPrice} تومان</span>
+              </div>
+              <div className="flex justify-between text-slate-900 font-light">
+                <span>مبلغ قابل پرداخت :</span>
+                <span>{cart.totalPrice} تومان</span>
+              </div>
+            </div>
+          </>
         )}
       </div>
     </div>

@@ -5,7 +5,11 @@ import minusSVG from "@/assets/minus.svg";
 import trash from "@/assets/trash-2.svg";
 import { useDispatch } from "react-redux";
 import { productType } from "@/types";
-import { addProduct, removeProduct } from "@/redux/features/cart/cartSlice";
+import {
+  addProduct,
+  deleteProduct,
+  removeProduct,
+} from "@/redux/features/cart/cartSlice";
 
 const CartButtons = ({
   count,
@@ -33,7 +37,10 @@ const CartButtons = ({
           <Image src={minusSVG} alt="plus" />
         </span>
       </div>
-      <div className="mr-3">
+      <div
+        className="mr-3 cursor-pointer"
+        onClick={() => dispath(deleteProduct(product))}
+      >
         <Image src={trash} alt="trash" />
       </div>
     </div>

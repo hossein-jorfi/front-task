@@ -1,8 +1,8 @@
 "use client";
 
-import { cartSliceType } from "@/redux/features/cart/cartSlice";
+import { cartSliceType, deleteProduct } from "@/redux/features/cart/cartSlice";
 import { productType } from "@/types";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import closeSVG from "@/assets/Close.svg";
 import CartButtons from "./CartButtons";
@@ -12,6 +12,7 @@ type CartCardProps = {
 };
 
 const CartCard = ({ id }: CartCardProps) => {
+  const dispath = useDispatch();
   const cart: cartSliceType = useSelector((store: any) => store.cart);
   const productInCart = cart.products.find(
     (item: productType) => item.id === id
@@ -36,9 +37,11 @@ const CartCard = ({ id }: CartCardProps) => {
             count={productInCart?.count as number}
             product={productInCart as productType}
           />
-          <p className="text-sm mt-2 text-[#FF385C]">{productInCart?.price} تومان</p>
+          <p className="text-sm mt-2 text-[#FF385C]">
+            {productInCart?.price} تومان
+          </p>
         </div>
-        <div>
+        <div className="cursor-pointer" onClick={() => dispath(deleteProduct(productInCart))}>
           <Image src={closeSVG} alt="close" />
         </div>
       </div>
