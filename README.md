@@ -1,4 +1,4 @@
-<h1>this is a task that an company gave me to see my skills and i passed it</h1>
+<h1>This is a task that a company gave me to see my skills, and I passed it.</h1>
 <br /><br />
 
 
